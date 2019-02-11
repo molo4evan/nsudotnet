@@ -1,0 +1,5 @@
+D:\Coding\nsudotnet\Guesser\bin\Debug\Guesser.exe
+D:\Coding\nsudotnet\Guesser\bin\Debug\Guesser.pdb
+D:\Coding\nsudotnet\Guesser\obj\Debug\Guesser.csprojResolveAssemblyReference.cache
+D:\Coding\nsudotnet\Guesser\obj\Debug\Guesser.exe
+D:\Coding\nsudotnet\Guesser\obj\Debug\Guesser.pdb

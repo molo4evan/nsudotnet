@@ -1,0 +1,5 @@
+D:\Coding\nsudotnet\ConsoleCalendar\obj\Debug\ConsoleCalendar.csprojResolveAssemblyReference.cache
+D:\Coding\nsudotnet\ConsoleCalendar\bin\Debug\ConsoleCalendar.exe
+D:\Coding\nsudotnet\ConsoleCalendar\bin\Debug\ConsoleCalendar.pdb
+D:\Coding\nsudotnet\ConsoleCalendar\obj\Debug\ConsoleCalendar.exe
+D:\Coding\nsudotnet\ConsoleCalendar\obj\Debug\ConsoleCalendar.pdb

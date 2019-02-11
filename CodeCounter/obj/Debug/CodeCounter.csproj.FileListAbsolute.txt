@@ -1,0 +1,5 @@
+D:\Coding\nsudotnet\CodeCounter\obj\Debug\CodeCounter.csprojResolveAssemblyReference.cache
+D:\Coding\nsudotnet\CodeCounter\bin\Debug\CodeCounter.exe
+D:\Coding\nsudotnet\CodeCounter\bin\Debug\CodeCounter.pdb
+D:\Coding\nsudotnet\CodeCounter\obj\Debug\CodeCounter.exe
+D:\Coding\nsudotnet\CodeCounter\obj\Debug\CodeCounter.pdb

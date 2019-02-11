@@ -66,9 +66,7 @@ namespace Guesser {
                 if (tries % 4 == 0) {
                     CheerUp();
                 }
-                else {
-                    Console.WriteLine("Мимо...");
-                }
+                Console.WriteLine(number > target ? "Многовато будет..." : "Бери выше!");
             }
         }
 
