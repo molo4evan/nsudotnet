@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Guesser {
@@ -25,13 +26,15 @@ namespace Guesser {
             if (nickname.Equals(Godmode)) {
                 Console.WriteLine("/** О, Великий Создатель, как вы и просили, сообщаю загаданное число: {0} **/", target);
             }
-            var tries = 0;
+            var triesCount = 0;
             var queses = new bool[Border];
             for (var i = 0; i < Border; i++) {
                 queses[i] = false;
             }
             Console.WriteLine("Ну, поехали, лупи!");
             var start = DateTime.Now;
+            var badTries = new List<int>();
+            
             while (true) {
                 var input = Console.ReadLine() ?? "";
                 if (input.Equals("-q")) {
@@ -56,16 +59,17 @@ namespace Guesser {
                 }
                 queses[number] = true;
 
-                tries++;
+                triesCount++;
                 if (number.Equals(target)) {
                     var end = DateTime.Now;
-                    Congratulations(tries, end - start);
+                    Congratulations(triesCount, end - start);
                     return;
                 }
 
-                if (tries % 4 == 0) {
+                if (triesCount % 4 == 0) {
                     CheerUp();
                 }
+                badTries.Add(number);
                 Console.WriteLine(number > target ? "Многовато будет..." : "Бери выше!");
             }
         }
@@ -88,6 +92,7 @@ namespace Guesser {
                 Console.WriteLine("больше 10% - не берись, себе дороже выйдет.");
                 Console.WriteLine("{0}-я попытка... Ну, наверное, бывает и хуже (но это не точно).", tries);
             }
+            
             Console.WriteLine("\nНу-ка, а че там по времени...");
             if (delta < GoodTime) {
                 Console.WriteLine("А у тебя, брат, похоже, самая быстрая рука на Диком Западе... Девушка-то есть?");
