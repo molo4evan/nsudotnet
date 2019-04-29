@@ -10,7 +10,6 @@
       <e p="appsettings.json" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
-        <e p="DataController.cs" t="Include" />
         <e p="ProjectsController.cs" t="Include" />
         <e p="WorkerController.cs" t="Include" />
       </e>
@@ -26,6 +25,8 @@
         <e p="20190415171138_ProjectsNecessaryFK.Designer.cs" t="Include" />
         <e p="20190416062813_AddNullFK.cs" t="Include" />
         <e p="20190416062813_AddNullFK.Designer.cs" t="Include" />
+        <e p="20190429151126_AddAge.cs" t="Include" />
+        <e p="20190429151126_AddAge.Designer.cs" t="Include" />
         <e p="WPDataContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
