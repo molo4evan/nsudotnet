@@ -1,0 +1,13 @@
+@model Worker
+@{
+    ViewBag.Title = "Adding worker";
+    Layout = "_Layout";
+}
+
+<h2>Adding worker</h2>
+
+<form method="post" action="">
+    @Html.EditorForModel()
+    <br/>
+    <input type="submit" name="Submit" value="Create"/>
+</form>

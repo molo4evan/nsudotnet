@@ -1,0 +1,43 @@
+@model IEnumerable<Project>
+
+@{
+    ViewBag.Title = "Projects";
+    Layout = "_Layout";
+}
+
+<div>
+    <h3>Projects</h3>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Owner</td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var project in Model) {
+            <tr>
+                <td>@project.Id</td>
+                <td>@project.Name</td>
+                <td>@project.Price</td>
+                <td>@project.Worker.LastName @project.Worker.FirstName @project.Worker.Patronymic</td>
+                <td>
+                    <form action="/projects/edit/@project.Id">
+                        <input type="submit" value="Edit"/>
+                    </form>
+                </td>
+                <td>
+                    <form action="/projects/delete/@project.Id">
+                        <input type="submit" value="Delete"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+    <p>
+        <form action="/projects/add">
+            <input type="submit" value="Add project"/>
+        </form>
+    </p>
+</div>

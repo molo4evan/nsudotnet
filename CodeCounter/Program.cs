@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Globalization;
 
 namespace CodeCounter {
     internal static class Program {
         public static void Main(string[] args) {
+            
             try {
                 CodeStringCounter.Configure("comments.txt");
             }

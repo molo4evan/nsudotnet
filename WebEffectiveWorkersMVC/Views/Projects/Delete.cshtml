@@ -1,0 +1,16 @@
+@model Project
+@{
+    ViewBag.Title = "Delete worker";
+    Layout = "_Layout";
+}
+<h2>Delete worker @Model.Name</h2>
+<dl>
+    <dt>Name</dt>
+    <dd>@Html.DisplayFor(model => model.Name)</dd>
+    
+    <dt>Price</dt>
+    <dd>@Html.DisplayFor(model => model.Price)</dd>
+</dl>
+<form method="post" action="">
+    <p><input type="submit" value="Delete"/></p>
+</form>

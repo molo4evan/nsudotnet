@@ -1,0 +1,16 @@
+@model Project
+@{
+    ViewBag.Title = "Adding project";
+    Layout = "_Layout";
+}
+
+<h2>Adding project</h2>
+
+<form method="post" action="">
+    @Html.EditorForModel()
+    @* @Html.EditorFor(model => model.Name) *@
+    @* @Html.EditorFor(model => model.Price) *@
+    @* @Html.DropDownListFor(model => model.WorkerId, ViewBag.Workers as SelectList) *@
+    <br/>
+    <input type="submit" name="Submit" value="Create"/>
+</form>

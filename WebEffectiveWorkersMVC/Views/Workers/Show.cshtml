@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Worker>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Workers";
+}
+<div>
+    <h3>Workers</h3>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Last name</td>
+            <td>First name</td>
+            <td>Patronymic</td>
+            <td>Total salary</td>
+            <td>Projects</td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var worker in Model) {
+            <tr>
+                <td>@worker.Id</td>
+                <td>@worker.LastName</td>
+                <td>@worker.FirstName</td>
+                <td>@worker.Patronymic</td>
+                <td>@((ViewBag.WorkersPrice as Dictionary<int, decimal>)[worker.Id])</td>
+                <td>
+                    <ul>
+                        @foreach (var project in worker.Projects) {
+                            <li>@project.Name</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <form action="/workers/edit/@worker.Id">
+                        <input type="submit" value="Edit"/>
+                    </form>
+                </td>
+                <td>
+                    <form action="/workers/delete/@worker.Id">
+                        <input type="submit" value="Delete"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+    <p>
+        <form action="/workers/add">
+            <input type="submit" value="Add worker"/>
+        </form>
+    </p>
+</div>

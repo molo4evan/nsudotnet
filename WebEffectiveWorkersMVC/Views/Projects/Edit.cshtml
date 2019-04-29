@@ -1,0 +1,13 @@
+@model Project
+@{
+    ViewBag.Title = "Editing project";
+    Layout = "_Layout";
+}
+
+<h2>Editing project @Model.Name</h2>
+
+<form method="post" action="">
+    @Html.EditorForModel()
+    <br/>
+    <input type="submit" name="Submit" value="Submit"/>
+</form>

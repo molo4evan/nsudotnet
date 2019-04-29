@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -14,14 +15,11 @@ namespace CodeCounter {
                 lines = File.ReadAllLines(filepath);
             }
             catch (FileNotFoundException) {
-                Comments.Clear();
                 return;
             }
-            
-            lines = lines.Select( s => s.TrimStart(CharsToTrim) ).ToArray();
             Comments.Clear();
             foreach (var line in lines) {
-                var parts = line.Split(' ', '\t');
+                var parts = line.Split(CharsToTrim);
                 switch (parts.Length) {
                     case 1:
                         Comments.Add(new Comment(false, parts[0], null));
@@ -88,6 +86,7 @@ namespace CodeCounter {
                 
                 count++;
             }
+            
             return count;
         }
     }

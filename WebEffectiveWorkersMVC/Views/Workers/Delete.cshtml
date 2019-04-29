@@ -1,0 +1,19 @@
+@model Worker
+@{
+    ViewBag.Title = "Delete worker";
+    Layout = "_Layout";
+}
+<h2>Delete worker @Model.FirstName @Model.LastName</h2>
+<dl>
+    <dt>Last name</dt>
+    <dd>@Html.DisplayFor(model => model.LastName)</dd>
+    
+    <dt>First name</dt>
+    <dd>@Html.DisplayFor(model => model.FirstName)</dd>
+    
+    <dt>Patronymic</dt>
+    <dd>@Html.DisplayFor(model => model.Patronymic)</dd>
+</dl>
+<form method="post" action="">
+    <p><input type="submit" value="Delete"/></p>
+</form>
